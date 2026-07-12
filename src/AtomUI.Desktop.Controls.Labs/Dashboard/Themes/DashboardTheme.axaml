@@ -1,0 +1,44 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:atom="https://atomui.net"
+                    xmlns:labs="https://atomui.net/labs"
+                    x:ClassModifier="internal">
+    <ControlTheme x:Key="{x:Type labs:Dashboard}"
+                  TargetType="labs:Dashboard">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Background="{atom:SharedTokenResource ColorBgContainer}"
+                        BorderBrush="{atom:SharedTokenResource ColorPrimaryBorder}"
+                        BorderThickness="{atom:SharedTokenResource BorderThickness}"
+                        CornerRadius="{atom:SharedTokenResource BorderRadiusLG}"
+                        Padding="{atom:SharedTokenResource PaddingLG}">
+                    <Grid RowDefinitions="Auto,Auto,Auto"
+                          ColumnDefinitions="Auto,*">
+                        <Border Grid.RowSpan="3"
+                                Width="4"
+                                Margin="0,0,16,0"
+                                Background="{atom:SharedTokenResource ColorPrimary}"
+                                CornerRadius="{atom:SharedTokenResource BorderRadiusLG}" />
+                        <TextBlock Grid.Column="1"
+                                   Text="Hello Dashboard"
+                                   FontSize="24"
+                                   FontWeight="SemiBold"
+                                   Foreground="{atom:SharedTokenResource ColorText}" />
+                        <TextBlock Grid.Row="1"
+                                   Grid.Column="1"
+                                   Margin="0,8,0,0"
+                                   Text="Shared Token driven surface"
+                                   FontSize="14"
+                                   Foreground="{atom:SharedTokenResource ColorTextSecondary}" />
+                        <TextBlock Grid.Row="2"
+                                   Grid.Column="1"
+                                   Margin="0,12,0,0"
+                                   Text="ColorPrimary / ColorBgContainer / BorderRadiusLG / PaddingLG"
+                                   FontSize="12"
+                                   Foreground="{atom:SharedTokenResource ColorTextSecondary}" />
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>$(AtomUIDevelopTargetFramework)</TargetFramework>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>AtomUI.Desktop.Controls.Labs.Sample</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <IsAotCompatible>true</IsAotCompatible>
+        <IsTrimmable>true</IsTrimmable>
+        <PublishTrimmed>true</PublishTrimmed>
+        <PublishAot Condition="'$(LabsPublishAot)' == ''">true</PublishAot>
+        <PublishAot Condition="'$(LabsPublishAot)' != ''">$(LabsPublishAot)</PublishAot>
+        <SelfContained>true</SelfContained>
+        <UseAppHost>true</UseAppHost>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia.Desktop" />
+        <PackageReference Include="Avalonia.Themes.Fluent" />
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="AvaloniaUI.DiagnosticsSupport" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../../src/AtomUI.Core/AtomUI.Core.csproj" />
+        <ProjectReference Include="../../src/AtomUI.Desktop.Controls.Labs/AtomUI.Desktop.Controls.Labs.csproj" />
+    </ItemGroup>
+</Project>

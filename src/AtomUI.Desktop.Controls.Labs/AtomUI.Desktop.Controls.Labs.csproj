@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>$(AtomUITargetFrameworks)</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+        <CompilerGeneratedFilesOutputPath>GeneratedFiles</CompilerGeneratedFilesOutputPath>
+        <RootNamespace>AtomUI.Desktop.Controls.Labs</RootNamespace>
+        <Title>AtomUI Desktop Controls Labs</Title>
+        <Description>Experimental Avalonia desktop controls built on AtomUI infrastructure. Labs controls do not guarantee Ant Design visual compliance and do not depend on AtomUI formed control packages.</Description>
+        <PackageTags>avalonia AtomUI desktop experimental controls labs</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="$(MSBuildThisFileDirectory)../../README.nuget.md" />
+        <None Include="README.nuget.md" Pack="true" PackagePath="/" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="AtomUI.Desktop.Controls.Labs.Tests" />
+        <InternalsVisibleTo Include="AtomUI.Desktop.Controls.Labs.Performance" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../AtomUI.Core/AtomUI.Core.csproj" />
+        <ProjectReference Include="../AtomUI.Generator/AtomUI.Generator.csproj"
+                          OutputItemType="Analyzer"
+                          ReferenceOutputAssembly="false"
+                          PrivateAssets="all"/>
+    </ItemGroup>
+</Project>

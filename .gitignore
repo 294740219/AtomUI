@@ -205,7 +205,10 @@ cmake-build-*/
 controlgallery/AtomUIGallery/GeneratedFiles/Avalonia.Generators/
 controlgallery/AtomUIGallery/GeneratedFiles/AtomUI.Toolkits.GalleryBase.Generator/
 src/AtomUI.Toolkits.GalleryBase/GeneratedFiles/Avalonia.Generators/
+src/AtomUI.Desktop.Controls.Labs/GeneratedFiles/
 .referenceprojects/
 .claude/settings.local.json
 .superpowers/
 docs/superpowers/plans
+
+dev-and-mark

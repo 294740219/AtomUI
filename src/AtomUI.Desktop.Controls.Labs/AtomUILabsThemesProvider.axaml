@@ -1,0 +1,11 @@
+<atom:ControlThemesProvider xmlns="https://github.com/avaloniaui"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:atom="https://atomui.net"
+                            x:Class="AtomUI.Desktop.Controls.Labs.AtomUILabsThemesProvider"
+                            Id="AtomUI.Desktop.Controls.Labs"
+                            x:ClassModifier="internal">
+    <atom:ControlThemesProvider.ControlThemes>
+        <ResourceInclude Source="Dashboard/Themes/DashboardThemes.axaml" />
+        <ResourceInclude Source="LED/Themes/LEDThemes.axaml" />
+    </atom:ControlThemesProvider.ControlThemes>
+</atom:ControlThemesProvider>
